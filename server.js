@@ -74,8 +74,6 @@ app.put('/products/:id', async (req,res) => {
     }
  })
 
- //if you want to use form instead of json, set middleware
- app.use(express.urlencoded({extended: false}))
 
  // for removing/deleting a product from database
 
