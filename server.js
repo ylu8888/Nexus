@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const Product = require('./models/productModel')
+require('dotenv').config()
+
+const MONGODB_URL = process.env.MONGODB_URL
 
 //need to specify json middleware so app can understand json
 app.use(express.json())
@@ -94,7 +97,7 @@ app.put('/products/:id', async (req,res) => {
 
 
 mongoose.set("strictQuery", false)
-mongoose.connect('mongodb+srv://treadlightly8888:123456admin@nexusapi.amkso3m.mongodb.net/NexusAPI?retryWrites=true&w=majority')
+mongoose.connect('MONGODB_URL')
 .then(() => {
     console.log('Connected to MongoDB!')
     app.listen(3000, () => {
