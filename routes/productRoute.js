@@ -1,31 +1,10 @@
-const express = require('express')
-const app = express()
-const mongoose = require('mongoose')
-require('dotenv').config()
-const productRoute = require('./routes/productRoute')
+const express = require('express');
+const router = express.Router();
+const Product = require('../models/productModel')
 
-//need middleware to use the productRoute
-app.use('/api', productRoute)
-
-const MONGODB_URL = process.env.MONGODB_URL
-
-//need to specify json middleware so app can understand json
-app.use(express.json())
-//if you want to use form instead of json, set middleware to form
-app.use(express.urlencoded({extended: false}))
-
-//routes for running web page
-
-app.get('/', (req,res) => {
-    res.send('Hello Node Api!')
-})
-
-app.get('/blog', (req,res) => {
-    res.send('Hello Blog! My name is Yang')
-})
 
 //route for saving data into database
-app.post('/products', async(req, res) => {
+router.post('/products', async(req, res) => {
     try{
         //since we need to save data to database, we have to save it through product Model
         //when interacting with database, use await
@@ -43,7 +22,7 @@ app.post('/products', async(req, res) => {
 //for fetching and getting data from database
 
 //this will retrieve ALL products
-app.get('/products', async(req, res) => {
+router.get('/products', async(req, res) => {
     try {
         const products = await Product.find({}) 
         res.status(200).json(products) //put the product display in json
@@ -53,7 +32,7 @@ app.get('/products', async(req, res) => {
 })
 
 //this will retrieve product by ID
-app.get('/products/:id', async(req, res)=> {
+router.get('/products/:id', async(req, res)=> {
     try {
         const {id} = req.params; //deconstruct the id from the request params
         const product = await Product.findById(id); //instead of using find all prods, use the function to search it by id 
@@ -65,7 +44,7 @@ app.get('/products/:id', async(req, res)=> {
 
 
 //for updating and editing a product in database
-app.put('/products/:id', async (req,res) => {
+router.put('/products/:id', async (req,res) => {
     try{
         const {id} = req.params;
         const product = await Product.findByIdAndUpdate(id, req.body); //use update function with 2 parameters, the id and the new change for product 
@@ -83,7 +62,7 @@ app.put('/products/:id', async (req,res) => {
 
  // for removing/deleting a product from database
 
- app.delete('/products/:id', async (req, res) => {
+ router.delete('/products/:id', async (req, res) => {
     try {
         const {id} = req.params;
         const product = await Product.findByIdAndDelete(id);
@@ -99,13 +78,4 @@ app.put('/products/:id', async (req,res) => {
  }) 
 
 
-mongoose.set("strictQuery", false)
-mongoose.connect('MONGODB_URL')
-.then(() => {
-    console.log('Connected to MongoDB!')
-    app.listen(3000, () => {
-        console.log(`Node API is running!`)
-    })
-}).catch((error) => {
-    console.log(error)
-})
+ module.exports = router;
