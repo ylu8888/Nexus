@@ -13,7 +13,7 @@ const productSchema = mongoose.Schema(
             required: true
          
         },
-        year: {
+        date: {
             type: String,
             required: true,
             default: "No date"
