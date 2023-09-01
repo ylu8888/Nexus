@@ -18,7 +18,7 @@ router.get('/:id', getProduct)
 router.put('/:id', updateProduct)
 
 //for removing/deleting a product from database
- router.delete('/:id', deleteProduct) 
+router.delete('/:id', deleteProduct) 
 
 
  module.exports = router;
