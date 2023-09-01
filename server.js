@@ -7,7 +7,7 @@ const errorMiddleware = require('./middleware/errorMiddleware')
 var cors = require('cors')
 
 //need middleware to use the productRoute
-app.use('/api/products', productRoute)
+
 
 const MONGODB_URL = process.env.MONGODB_URL
 
@@ -23,6 +23,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 //routes for running web page
+app.use('/api/products', productRoute)
 
 app.get('/', (req,res) => {
     //throw new Error('fake error')
