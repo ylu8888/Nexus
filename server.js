@@ -5,7 +5,7 @@ require('dotenv').config()
 const productRoute = require('./routes/productRoute')
 
 //need middleware to use the productRoute
-app.use('/api', productRoute)
+app.use('/api/products', productRoute)
 
 const MONGODB_URL = process.env.MONGODB_URL
 
@@ -100,7 +100,7 @@ app.put('/products/:id', async (req,res) => {
 
 
 mongoose.set("strictQuery", false)
-mongoose.connect('MONGODB_URL')
+mongoose.connect(MONGODB_URL)
 .then(() => {
     console.log('Connected to MongoDB!')
     app.listen(3000, () => {
