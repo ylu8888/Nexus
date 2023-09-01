@@ -16,7 +16,7 @@ const productSchema = mongoose.Schema(
         year: {
             type: String,
             required: true,
-            default: "No description"
+            default: "No date"
 
         },
         image: { 

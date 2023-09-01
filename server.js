@@ -4,12 +4,19 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const productRoute = require('./routes/productRoute')
 const errorMiddleware = require('./middleware/errorMiddleware')
+var cors = require('cors')
 
 //need middleware to use the productRoute
 app.use('/api/products', productRoute)
 
 const MONGODB_URL = process.env.MONGODB_URL
 
+var corsOptions = {
+    origin: 'http://example.com',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+
+app.use(cors(corsOptions))
 //need to specify json middleware so app can understand json
 app.use(express.json())
 //if you want to use form instead of json, set middleware to form
