@@ -6,7 +6,6 @@ const productRoute = require('./routes/productRoute')
 const errorMiddleware = require('./middleware/errorMiddleware')
 var cors = require('cors')
 
-
 const MONGO_URL = process.env.MONGO_URL
 
 var corsOptions = {
