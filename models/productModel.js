@@ -10,12 +10,13 @@ const productSchema = mongoose.Schema(
         },
         description: {
             type: String,
-            required: true,
-            default: "No description"
+            required: true
+         
         },
         year: {
             type: String,
             required: true,
+            default: "No description"
 
         },
         image: { 

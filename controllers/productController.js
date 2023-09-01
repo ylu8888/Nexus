@@ -19,8 +19,8 @@ const getProduct = asyncHandler (async(req, res)=> {
         const product = await Product.findById(id); //instead of using find all prods, use the function to search it by id 
         res.status(200).json(product);
     } catch (error) {
-        res.status(500) //error middleware doesnt work with async, need express-async handler
-        throw new Error(error.message)
+        res.status(500); //error middleware doesnt work with async, need express-async handler
+        throw new Error(error.message);
         //res.status(500).json({message: error.message})
     }
 })
@@ -30,12 +30,12 @@ const createProduct = asyncHandler(async(req, res) => {
     try{
         //since we need to save data to database, we have to save it through product Model
         //when interacting with database, use await
-        const product = await Product.create(req.body) //creating new product in the database
+        const product = await Product.create(req.body); //creating new product in the database
         res.status(200).json(product);
         
         } catch (error) {
-            res.status(500)
-            throw new Error(error.message)
+            res.status(500);
+            throw new Error(error.message);
         }
          
 })
@@ -65,8 +65,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
         const product = await Product.findByIdAndDelete(id);
 
         if(!product) {
-            res.status(404);
-            throw new Error(`Cannot find any product with this ID ${id}`);
+             
            // return restatus(404).json({message: `Cannot find any product with this ID ${id}`})
         }
         res.status(200).json(product) //if product is successfully deleted, return the prod deleted 
