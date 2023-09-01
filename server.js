@@ -7,11 +7,12 @@ const errorMiddleware = require('./middleware/errorMiddleware')
 var cors = require('cors')
 
 const MONGO_URL = process.env.MONGO_URL
+const FRONTEND = process.env.FRONTEND
 
 var corsOptions = {
-    origin: 'http://example.com',
+    origin: FRONTEND,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
+}
 
 app.use(cors(corsOptions))
 //need to specify json middleware so app can understand json
