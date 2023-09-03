@@ -2,7 +2,7 @@
 
 ## Website Link: https://odysseymuseum.netlify.app/
 
-REST API for an online antiquities museum that displays ancient and modern artifacts. Visitors may view, add, edit, delete artifacts and their descriptions.
+**REST API for an online antiquities museum that displays ancient and modern artifacts. Visitors may view, add, edit, delete artifacts and their descriptions.**
 
 The purpose of this project is to learn and practice concepts related to:
 
@@ -18,7 +18,7 @@ The purpose of this project is to learn and practice concepts related to:
 
 * Using HTTP (GET, POST, PUT, PATCH, DELETE, status codes)
 
-*Website Look:*
+**Website Look:**
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/fc05ba19-3066-4b6f-8a46-3301186c7ad7)
 
@@ -26,15 +26,15 @@ The purpose of this project is to learn and practice concepts related to:
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/7b0f1488-590f-4bee-aacd-bf91e51f6ff7)
 
-*Application Architecture:*
+**Application Architecture:**
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/32e2dc74-2f8d-42e8-860a-6c413c21fd4a)
 
-*API Endpoints (CRUD):*
+**API Endpoints (CRUD):**
 
 *GET /api/products*
 
-*GET/READ all data: Returns all the artifacts and their descriptions 
+GET/READ all data: Returns all the artifacts and their descriptions 
 
 *GET /api/products/{id}*
 
@@ -46,13 +46,13 @@ POST/CREATE a new resource: Creates a new artifact
 
 *PUT /api/products/{id}*
 
-*PUT/UPDATE a single resource: Edits a particular artifact's description
+PUT/UPDATE a single resource: Edits a particular artifact's description
 
 *DELETE /api/products/{id}*
 
 DELETE a single resource: Deletes the artifact with specified ID
 
-*Sample Endpoints using Postman:* 
+**Sample Endpoints using Postman:**
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/4e972360-b972-4e25-aeb8-904b307b2fe0)
 
