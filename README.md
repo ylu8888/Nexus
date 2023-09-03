@@ -20,7 +20,7 @@ The purpose of this project is to learn and practice concepts related to:
 
 ## **Website Look:**
 
-![image](https://github.com/ylu8888/NexusAPI/assets/123523291/fc05ba19-3066-4b6f-8a46-3301186c7ad7)
+![image](https://github.com/ylu8888/NexusAPI/assets/123523291/3be16da0-f85e-4774-933d-09f2968fabd4)
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/34046aff-e5d8-404b-8da6-c64be6d65736)
 
