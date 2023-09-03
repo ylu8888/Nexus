@@ -18,7 +18,7 @@ The purpose of this project is to learn and practice concepts related to:
 
 * Using HTTP (GET, POST, PUT, PATCH, DELETE, status codes)
 
-**Website Look:**
+##**Website Look:**
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/fc05ba19-3066-4b6f-8a46-3301186c7ad7)
 
@@ -26,11 +26,15 @@ The purpose of this project is to learn and practice concepts related to:
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/7b0f1488-590f-4bee-aacd-bf91e51f6ff7)
 
-**Application Architecture:**
+##**Application Architecture:**
 
 ![image](https://github.com/ylu8888/NexusAPI/assets/123523291/32e2dc74-2f8d-42e8-860a-6c413c21fd4a)
 
-**API Endpoints (CRUD):**
+##**Sample Endpoints using Postman:**
+
+![image](https://github.com/ylu8888/NexusAPI/assets/123523291/4e972360-b972-4e25-aeb8-904b307b2fe0)
+
+##**API Endpoints (CRUD):**
 
 *GET /api/products*
 
@@ -52,9 +56,6 @@ PUT/UPDATE a single resource: Edits a particular artifact's description
 
 DELETE a single resource: Deletes the artifact with specified ID
 
-**Sample Endpoints using Postman:**
-
-![image](https://github.com/ylu8888/NexusAPI/assets/123523291/4e972360-b972-4e25-aeb8-904b307b2fe0)
 
 
 
