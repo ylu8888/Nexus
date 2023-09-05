@@ -12,13 +12,13 @@ The purpose of this project is to learn and practice concepts related to:
 
 * MVC Architecture Pattern
   
-* Practicing Node.js, Express, & React
+* Working with Node.js, Express, & React
 
 * Familiarizing myself with MongoDB
 
 * Testing API Endpoints with Postman
 
-* Using HTTP (GET, POST, PUT, PATCH, DELETE, status codes)
+* Using HTTP (GET, POST, PUT, DELETE, status codes)
 
 ## **Website Look:**
 
